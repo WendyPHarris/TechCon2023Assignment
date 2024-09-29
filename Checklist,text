@@ -1,0 +1,18 @@
+W3C Markup validation service for all html pages
+contact.html - pass
+index.html - pass
+register.html - pass
+schedule.html - pass
+Stylesheet.css - pass
+
+browser checks
+
+firefox - pass
+chrome - pass
+opera - pass
+edge - pass
+no personal access to safari..
+
+internal test:
+
+nav links work, buttons work, footer link works, forms work, speakers click headshot events work

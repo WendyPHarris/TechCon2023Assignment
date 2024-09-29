@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <link rel="stylesheet" type="text/css" href="stylesheet.css">
+  <meta charset="UTF-8">
+  <script src="https://cdn.jsdelivr.net/npm/sweetalert2@10"></script>
+  <title>Contact Page - TechCon 2023</title>
+</head>
+
+<body>
+
+  <!--Background Image-->
+  <div class = 'backgrounds'></div>
+  
+  <!-- Navigation Bar START -->
+  <nav>
+    <a href="index.html">Home</a>
+    <a href="register.html">Register</a>
+    <a href="schedule.html">Schedule</a>
+    <a href="speakers.html">Speakers</a>
+  </nav>
+  <!-- Navigation Bar END -->
+
+  <!-- Header START -->
+  <header>
+    <div class="header-container">
+      <h1>Contact TechCon 2023</h1>
+    </div>
+  </header>
+  <!-- Header END -->
+
+  <!-- Content START -->
+  <div class="content-container">
+
+    <!-- Contact Form Div -->
+    <div class="contact-form">
+      <h2>Get in Touch</h2>
+
+      <!-- Contact Form -->
+      <form name="contactForm" method="post" action="#" class="center-align" onsubmit="return sendMessage(event);">
+        <div class="form-row">
+          <label for="fullName">Name</label>
+          <input type="text" name="fullName" id="fullName" required>
+        </div>
+
+        <div class="form-row">
+          <label for="emailAddress">Email Address</label>
+          <input type="email" name="emailAddress" id="emailAddress" required>
+        </div>
+
+        <div class="form-row">
+          <label for="message">Your Message</label>
+          <textarea name="message" id="message" rows="4" required></textarea>
+        </div>
+
+        <div class="form-row">
+          <input type="reset" value="Clear">
+          <input type="submit" value="Send Message">
+        </div>
+      </form>
+      <!-- Contact Form -->
+
+    </div>
+
+    <!-- Additional Contact Info -->
+    <div class="additional-info">
+      <h3>Or, contact us manually!</h3>
+      <p>Email: info@techcon2023.com</p>
+      <p>Phone: +1 (555) 123-4567</p>
+      <p>Address: 123 Tech Avenue, Cityville</p>
+    </div>
+    <!--Additional Contact Info End-->
+
+  </div>
+  <!-- Content END -->
+
+   <!-- Footer Start -->
+   <footer class="footer">
+    <p style="font-size: 20px;">
+      Feel free to contact us above with any queries!
+    </p>
+  </footer>
+  <!-- Footer End -->
+
+  <script>
+    function sendMessage(event) {
+      // Get values from form fields
+      var fullName = document.forms["contactForm"]["fullName"].value;
+      var emailAddress = document.forms["contactForm"]["emailAddress"].value;
+      var message = document.forms["contactForm"]["message"].value;
+
+      // Check if any field is empty
+      if (fullName == "" || emailAddress == "" || message == "") {
+        alert("All fields must be filled out");
+        event.preventDefault(); // Prevent form submission
+        return false;
+      }
+
+      // Display a confirmation dialog using SweetAlert2
+      Swal.fire({
+        icon: 'success',
+        title: 'Message sent!',
+        text: 'Thank you for reaching out. We will get back to you soon!',
+      }).then((result) => {
+        // Reset the form after the user closes the SweetAlert modal
+        if (result.isConfirmed || result.isDismissed) {
+          document.forms["contactForm"].reset();
+        }
+      });
+
+      // Prevent form submission for now
+      event.preventDefault();
+
+      return true;
+    }
+  </script>
+
+</body>
+
+</html>

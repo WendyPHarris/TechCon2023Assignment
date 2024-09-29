@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <link rel="stylesheet" type="text/css" href="stylesheet.css">
+  <meta charset="UTF-8">
+  <script src="https://cdn.jsdelivr.net/npm/sweetalert2@10"></script>
+  <title>Registration - TechCon 2023</title>
+  <link rel="stylesheet" type="text/css" href="styles.css">
+</head>
+
+<body>
+
+  <!--Background Image-->
+  <div class = 'backgrounds'></div>
+
+  <!-- Navigation Bar Start-->
+  <nav>
+    <a href="index.html">Home</a>
+    <a href="schedule.html">Schedule</a>
+    <a href="speakers.html">Speakers</a>
+    <a href="contact.html">Contact</a>
+  </nav>
+  <!-- Navigation Bar End-->
+
+  <!-- Header Start-->
+  <header>
+    <div class="header-container">
+      <h1>Register for TechCon 2023</h1>
+    </div>
+  </header>
+  <!-- Header End -->
+
+  <!-- Content Start-->
+  <div class="content-container">
+    <div class="registration-container">
+
+      <!-- Image on the left -->
+      <div class="left-image">
+        <div class="registration-image">
+          <img src="Images/forms.jpeg" alt="Keyonte Image">
+        </div>
+      </div>
+      
+      <!-- Registration Form Start-->
+      <div class="registration-form">
+        <article>
+          <h2>Registration Form</h2>
+          <p style="text-align: center;">
+            Join us at TechCon 2023! Please fill out the registration form below to secure your spot.
+          </p>
+
+          <form name="registrationForm" method="post" class="center-align" onsubmit="return validateForm(event);">
+            <div class="form-row">
+              <label for="fullName">Full Name</label>
+              <input type="text" name="fullName" id="fullName" required>
+            </div>
+
+            <div class="form-row">
+              <label for="emailAddress">Email Address</label>
+              <input type="email" name="emailAddress" id="emailAddress" required>
+            </div>
+
+            <div class="form-row">
+              <label for="phoneNumber">Phone Number</label>
+              <input type="tel" name="phoneNumber" id="phoneNumber" required>
+            </div>
+
+            <div class="form-row">
+              <label for="company">Company</label>
+              <input type="text" name="company" id="company" required>
+            </div>
+
+            <div class="form-row">
+              <input type="reset" value="Clear">
+              <input type="submit" value="Register" onclick="return confirm('Are you sure you want to register?');">
+            </div>
+          </form>
+        </article>
+      </div>
+      <!-- Registration Form End -->
+
+      <!-- Image on the right -->
+      <div class="right-image">
+        <div class="registration-image">
+          <img src="Images/tick.jpeg" alt="Conference Image">
+        </div>
+      </div>
+
+    </div>
+  </div>
+  <!-- Content End-->
+
+   <!-- Footer Start-->
+   <footer class="footer">
+    <p style="font-size: 20px;">
+      Click here to get in touch --> <a href="contact.html">Contact Us</a>
+    </p>
+  </footer>
+  <!--Footer End-->
+
+  <script>
+    function validateForm(event) {
+      // Get values from form fields
+      var fullName = document.forms["registrationForm"]["fullName"].value;
+      var emailAddress = document.forms["registrationForm"]["emailAddress"].value;
+      var phoneNumber = document.forms["registrationForm"]["phoneNumber"].value;
+      var company = document.forms["registrationForm"]["company"].value;
+  
+      // Check if any field is empty
+      if (fullName == "" || emailAddress == "" || phoneNumber == "" || company == "") {
+        alert("All fields must be filled out");
+        event.preventDefault(); // Prevent form submission
+        return false;
+      }
+  
+      // Display a confirmation dialog using SweetAlert2
+      Swal.fire({
+        icon: 'success',
+        title: 'Registration successful!',
+        text: 'Thank you for joining TechCon 2023. Redirecting you to homepage now!',
+      }).then((result) => {
+        // Redirect to index.html after the user closes the SweetAlert modal
+        if (result.isConfirmed || result.isDismissed) {
+          window.location.href = "index.html";
+        }
+      });
+  
+      // Prevent form submission for now
+      event.preventDefault();
+  
+      return true;
+    }
+  </script>
+
+</body>
+
+</html>
+
+
+

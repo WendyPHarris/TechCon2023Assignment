@@ -1,0 +1,315 @@
+/* Common styles for all pages Start */
+
+/* Navigation bar and footer styles */
+nav a, .footer a {
+  padding: 10px 20px;
+  text-decoration: none;
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  font-size: 20px;
+}
+
+nav, .footer {
+  background-color: rgb(91, 88, 88);
+  display: flex;
+  color: white;
+}
+
+nav {
+  justify-content: flex-end;
+}
+
+nav a {
+  color: white;
+}
+
+.footer {
+  margin-top: 30px;
+  margin-bottom: 30px;
+}
+
+.footer a {
+  color: rgb(41, 96, 206);
+}
+
+/* Header styles */
+header{
+  background-color: rgb(4, 13, 18);
+  color: white;
+  text-align: center;
+  padding: 10px;
+  margin: 30px;
+  font-family: sans-serif;
+}
+
+h1 {
+  font-size: 80px;
+}
+
+/*Content styles*/
+.content-container {
+  background-color: rgba(125, 221, 250, 0.26);
+  margin: 5px;
+  padding: 20px;
+  flex: 0.8;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+h2, h3, p{
+  text-align: center;
+}
+
+h2 {
+  font-size: 50px;
+  margin-top: 10px;
+  margin-bottom: 20px;
+  font-family: Georgia, Times, 'Times New Roman', serif;
+}
+
+h3 {
+  margin-top: 20px;
+  margin-bottom: 20px;
+  font-size: 35px;
+  font-family: system-ui;
+}
+
+p {
+  margin-top: 20px;
+  margin: 10px 10px;
+  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+  font-size: 30px;
+
+}
+
+/* Background Images */
+.backgrounds{
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  z-index: -1; /* Ensure it's behind other content */
+  display: flex;
+  background-image: url('Images/background.jpeg')
+}
+/* Common Styles End */
+
+
+
+
+/* Index style Starts */
+.conference_details, .conference_list{
+  display: flex;
+  flex-direction: column;
+  margin-top: 20px;
+}
+.conference_details {
+  align-items: center;
+  text-align: center;
+}
+
+.conference_list {
+  text-align: left;
+  font-size: 30px;
+}
+
+.reg_button {
+  display: inline-block;
+  padding: 10px 20px;
+  background-color: #333333;
+  color: #fff;
+  text-decoration: none;
+  border-radius: 4px;
+  transition: background-color 0.3s ease;
+  margin-top: 10px;
+}
+
+.reg_button:hover {
+  background-color: #555555;
+}
+
+/* Index Styles End */
+
+
+
+/* Form styles */
+form.center-align {
+  max-width: 400px;
+  margin: 0 auto;
+}
+
+.form-row {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 10px;
+}
+
+label {
+  width: 30%;
+  text-align: right;
+  margin-right: 10px;
+}
+
+input[type="text"],
+input[type="date"],
+input[type="email"],
+input[type="tel"] {
+  flex: 1;
+  padding: 8px;
+  border-radius: 4px;
+  box-sizing: border-box;
+}
+
+input[type="reset"],
+input[type="submit"] {
+  display: inline-block;
+  padding: 8px 16px;
+  background-color: rgb(22, 22, 94);
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  margin-left: 10px;
+  margin-right: 10px;
+}
+
+input[type="reset"]:hover,
+input[type="submit"]:hover {
+  background-color: rgb(97, 94, 94);
+}
+
+input[type="reset"] {
+  margin-right: 10px;
+}
+/* Forms Styles End */
+
+
+
+
+/* Speaker Styles Start */
+.speaker-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+}
+
+.speaker-profile {
+  width: 30%;
+  margin: 20px;
+  text-align: center;
+}
+
+.speaker-profile img {
+  width: 100%;
+  border-radius: 50%;
+  margin-bottom: 10px;
+  cursor: pointer;
+}
+
+.details {
+  display: none;
+  margin-top: 10px;
+  line-height: 1.5;
+  margin: 0;
+  padding: 0;
+  word-spacing: normal;
+}
+
+.speaker-profile.active img {
+  display: none;
+}
+
+.speaker-profile.active .details {
+  display: block;
+}
+/* Speakers Styles End */
+
+
+
+
+/* Schedule Styles Start */
+.schedule {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  margin-top: 10px;
+  margin-bottom: 30px;
+}
+
+table {
+  border-collapse: collapse;
+  margin-top: 15px;
+}
+
+th, td{
+  border: 3px solid black;
+  padding: 30px;
+}
+
+th {
+  background-color: rgb(56, 33, 98);
+  color: white;
+  font-size: 30px;
+}
+
+td {
+  background-color: rgb(25, 24, 24);
+  font-size: 20px;
+  color: white;
+}
+
+
+/* Schedule Styles End */
+
+
+
+/* Registration Styles Start*/
+.registration-container {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  margin-top: 20px;
+}
+
+/* Add this style for the black background */
+.registration-form {
+  background-color: rgb(34, 32, 32);
+  color: white;
+  padding: 20px;
+  border-radius: 10px;
+  width: 40%;
+}
+
+/* Image styles */
+.registration-image img {
+  width: 200px;
+  height: 200px; 
+  border-radius: 50%; 
+  margin-bottom: 20px; 
+  margin-right: 20px; 
+  margin-left: 20px;
+}
+/* Registration Styles End*/
+
+/*Contact Syles Start*/
+.additional-info,.contact-form {
+  background-color: rgb(34, 32, 32);
+  color: white;
+  padding: 20px;
+  border-radius: 10px;
+  margin-bottom: 20px;
+  margin-right: 100px;
+  margin-left: 100px;
+}

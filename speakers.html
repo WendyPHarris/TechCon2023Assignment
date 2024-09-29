@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <link type="text/css" rel="stylesheet" href="stylesheet.css">
+  <meta charset="UTF-8">
+  <title>TechCon 2023 - Speakers</title>
+</head>
+
+<body>
+
+  <!--Background Image-->
+  <div class = 'backgrounds'></div>
+
+  <!-- Nav Bar Start-->
+  <nav>
+    <a href="index.html">Home</a>
+    <a href="register.html">Register</a>
+    <a href="schedule.html">Schedule</a>
+    <a href="contact.html">Contact</a>
+  </nav>
+  <!--Nav Bar End-->
+
+  <!-- Header Start-->
+  <header>
+    <div class="header-container">
+      <h1>Speakers</h1>
+    </div>
+  </header>
+  <!--Header End-->
+
+  <!-- Content Start-->
+  <div class="content-container">
+    <article>
+      <h2>Meet Our Speakers</h2>
+      <h3 style="text-align: center;">
+        Click on the headshots to find out more!
+      </h3>
+
+      <!-- Speaker Profiles Start-->
+      <div class="speaker-container">
+        <!-- Speaker Profile 1 -->
+        <div class="speaker-profile" onclick="toggleDetails('details1', this)">
+          <img src="Images/Headshot1.jpeg" alt="Speaker 1">
+          <h3>Ethan Reynolds</h3>
+          <p id="details1" class="details">
+            A seasoned software engineer with a passion for innovative
+            technologies. With over a decade of experience, he has
+            contributed to major projects in artificial  intelligence and
+            machine learning. Ethan is known for his engaging talks that
+            demystify complex technical concepts and make them
+            accessible to a broad audience.
+          </p>
+        </div>
+
+        <!-- Speaker Profile 2 -->
+        <div class="speaker-profile" onclick="toggleDetails('details2', this)">
+          <img src="Images/Headshot2.jpeg" alt="Speaker 2">
+          <h3>Marcus Bennett</h3>
+          <p id="details2" class="details">
+            Bennett is a cybersecurity expert dedicated to enhancing
+            digital safety in an interconnected world. With a background
+            in ethical hacking, Marcus has worked on securing systems for 
+            various industries. His presentations are both informative
+            and entertaining, providing insights into the evolving 
+            landscape of cybersecurity threats and defenses.
+          </p>
+        </div>
+
+        <!-- Speaker Profile 3 -->
+        <div class="speaker-profile" onclick="toggleDetails('details3', this)">
+          <img src="Images/Headshot3.jpeg" alt="Speaker 3">
+          <h3>Nathan Chambers</h3>
+          <p id="details3" class="details">
+            Chambers is a forward-thinking data scientist who specializes
+            in deriving meaningful insights from vast datasets.
+            His work has been pivotal in shaping data-driven strategies for 
+            businesses. Nathan's talks focus on the practical applications 
+            of data science and how organizations can leverage data for 
+            informed decision-making.
+          </p>
+        </div>
+
+        <!-- Speaker Profile 4 -->
+        <div class="speaker-profile" onclick="toggleDetails('details4', this)">
+          <img src="Images/Headshot4.jpeg" alt="Speaker 4">
+          <h3>Sophia Lawson</h3>
+          <p id="details4" class="details">
+            Sophia Lawson is an influential figure in the field of user 
+            experience (UX) design. With a keen eye for aesthetics and a 
+            deep understanding of user behavior, she has crafted seamless 
+            and enjoyable digital experiences. Sophia's talks explore the 
+            evolving trends in UX design and how it shapes the user's 
+            interaction with technology.
+          </p>
+        </div>
+
+        <!-- Speaker Profile 5 -->
+        <div class="speaker-profile" onclick="toggleDetails('details5', this)">
+          <img src="Images/Headshot5.jpeg" alt="Speaker 5">
+          <h3>Isabella Harper</h3>
+          <p id="details5" class="details">
+            Harper is a rising star in the world of robotics and automation. 
+            Her groundbreaking work in developing intuitive human-robot 
+            interfaces has garnered attention in academic and industry 
+            circles. Isabella's presentations focus on the future of 
+            robotics, emphasizing the symbiotic relationship between humans 
+            and machines.
+          </p>
+        </div>
+
+        <!-- Speaker Profile 6 -->
+        <div class="speaker-profile" onclick="toggleDetails('details6', this)">
+          <img src="Images/Headshot6.jpeg" alt="Speaker 6">
+          <h3>Brandon Mitchell</h3>
+          <p id="details6" class="details">
+            Mitchell, a seasoned entrepreneur and tech enthusiast, brings a 
+            unique perspective to the intersection of business and 
+            technology. He has successfully founded and scaled tech 
+            startups, and his presentations offer valuable insights into the 
+            challenges and opportunities of entrepreneurship in the rapidly 
+            evolving tech landscape.
+          </p>
+        </div>
+      </div>
+      <!--Speakers profiles End-->
+    </article>
+  </div>
+  <!--Contend End-->
+
+  <!-- Footer Start-->
+  <footer class="footer">
+    <p style="font-size: 20px;">
+      Click here to get in touch --> <a href="contact.html">Contact Us</a>
+    </p>
+  </footer>
+  <!--Footer End-->
+  
+  <script>
+    function toggleDetails(id, element) {
+      var details = document.getElementById(id);
+  
+      // Toggle the clicked profile to active state
+      element.classList.toggle('active');
+  
+      // Toggle the display of image and details
+      var img = element.querySelector('img');
+      var paragraph = element.querySelector('.details');
+  
+      if (element.classList.contains('active')) {
+        img.style.display = 'none';
+        paragraph.style.display = 'block';
+      } else {
+        img.style.display = 'block';
+        paragraph.style.display = 'none';
+      }
+    }
+  </script>
+  
+</body>
+
+</html>
