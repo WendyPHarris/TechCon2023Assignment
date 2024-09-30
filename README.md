@@ -71,4 +71,4 @@ To view this project locally on your machine, follow these steps:
 
 ## License
 
-This project is licensed under the MIT License. Feel free to use, modify, and distribute this project.
+This project is licensed under the MIT License. Feel free to use, modify, and distribute this project. - see the [LICENSE](LICENSE) file for details.
